@@ -262,3 +262,61 @@ h1 {
     max-height: 20px;
     margin-left: 4%;
 }
+
+.working-process {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px repeat(5, 150px);
+    max-width: auto;
+    row-gap: 25px;
+
+    article:nth-child(-n+1) {
+        background-color: #B9FF66;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 100px 100px;
+        grid-template-areas: 
+        "number title button"
+        "info   info   info";
+        padding: 2%;
+
+        p {
+            grid-area: info;
+            border-top: 1px solid;
+            padding-top: 2%;
+            margin-inline: 30px;
+        }
+    } 
+
+    article {
+        display: grid;
+        background-color: #F3F3F3;
+        border-radius: 50px;
+        border: 1px solid rgb(0, 0, 0);
+        border-bottom: 6px solid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 100px;
+        padding: 2%;
+
+
+        .number-h3 {
+            font-size: 60px;
+            font-weight: 500;
+            margin-inline: 30px;
+            align-self:center;
+        }
+    
+        .title-h3 {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        img {
+            max-width: 70px;
+            align-self:center;
+            margin-inline: 30px;
+        }
+
+    }
+}
+
+
